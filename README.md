@@ -6,15 +6,15 @@ Based on docker Ubuntu 16.04 image
 
 Current image can also be found at dockerhub:
 
-https://hub.docker.com/r/joomlaprojects/docker-systemtests/
+https://hub.docker.com/r/puneet0191/docker-systemtests-1/
 
-`docker pull joomlaprojects/joomla-systemtests`
+`docker pull puneet0191/docker-systemtests-1`
 
 ## Included software
 
 * Apache 2.4
 * MySQL 5.7
-* PHP 7
+* PHP 7.1
 * Composer (System wide)
 
 ### GUI Software
