@@ -2,7 +2,7 @@
 
 Docker with LAMP setup, firefox, chrome and other tools for system tests with codeception.
 
-Based on docker Ubuntu 16.04 image
+Based on docker Ubuntu 17.10 image
 
 Current image can also be found at dockerhub:
 
