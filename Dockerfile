@@ -1,6 +1,5 @@
 # Joomla! System tests
-FROM ubuntu:xenial
-MAINTAINER Yves Hoppe <yves@compojoom.com>
+FROM ubuntu:artful
 
 # Set correct environment variables.
 ENV HOME /root
@@ -9,8 +8,8 @@ ENV HOME /root
 RUN apt-get update -qq
 
 # we use the enviroment variable to stop debconf from asking questions..
-RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mysql-server apache2 mysql-client php7.0 \
-    php7.0-cli php7.0-curl php7.0-gd php7.0-mysql php7.0-zip php7.0-xml php7.0-mbstring libapache2-mod-php7.0 curl \
+RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mysql-server apache2 mysql-client php7.1 \
+    php7.1-cli php7.1-curl php7.1-gd php7.1-mysql php7.1-zip php7.1-xml php7.1-intl php7.1-mbstring libapache2-mod-php7.1 curl \
 	wget firefox unzip git fluxbox libxss1 libappindicator1 libindicator7 openjdk-8-jre xvfb gconf-service fonts-liberation \
 	dbus xdg-utils libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig nodejs npm
 
