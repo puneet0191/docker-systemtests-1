@@ -26,7 +26,7 @@ RUN dpkg-divert --local --rename --add /sbin/initctl && \
 RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y zip mysql-server apache2 mysql-client php7.1 \
     php7.1-fpm php7.1-cli php7.1-curl php7.1-gd php7.1-mysql php7.1-zip php7.1-xml php7.1-intl php7.1-mbstring libapache2-mod-php7.1 curl \
 	wget unzip git fluxbox libxss1 libappindicator1 libindicator7 openjdk-8-jre xvfb gconf-service fonts-liberation \
-	dbus xdg-utils libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig nodejs
+	dbus xdg-utils libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig nodejs npm
 
 
 # package install is finished, clean up
