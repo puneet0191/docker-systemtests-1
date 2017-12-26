@@ -35,6 +35,7 @@ RUN apt-get clean # && rm -rf /var/lib/apt/lists/*
 # Create testing directory
 RUN mkdir -p /tests/www
 
+
 # Apache site conf
 ADD config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
@@ -51,3 +52,4 @@ RUN dpkg -i google-chrome*.deb
 
 # Start Apache and MySQL
 CMD /usr/bin/mysqld_safe & apache2ctl -D FOREGROUND
+RUN service mysql start
