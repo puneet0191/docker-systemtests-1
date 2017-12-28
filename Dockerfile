@@ -51,5 +51,5 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN dpkg -i google-chrome*.deb
 
 # Start Apache and MySQL
-CMD /usr/bin/mysqld_safe & apache2ctl -D FOREGROUND
-RUN service mysql start
+CMD apache2ctl -D FOREGROUND
+EXPOSE 3306
