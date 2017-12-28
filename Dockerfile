@@ -35,6 +35,8 @@ RUN apt-get clean # && rm -rf /var/lib/apt/lists/*
 # Create testing directory
 RUN mkdir -p /tests/www
 
+# Disable remote database security requirements.
+ENV JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1
 
 # Apache site conf
 ADD config/000-default.conf /etc/apache2/sites-available/000-default.conf
