@@ -8,9 +8,15 @@ ENV HOME /root
 # update the package sources
 RUN apt-get update -qq
 
+# Install PHP7.2 PPA
+RUN apt-get update --fix-missing
+RUN apt-get install -y software-properties-common python-software-properties
+RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+RUN apt-get update
+
 # we use the enviroment variable to stop debconf from asking questions..
-RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mariadb-server libqtgui4 mariadb-client apache2 php7.0 \
-    php7.0-cli php7.0-curl php7.0-gd php7.0-mysql php7.0-zip php7.0-xml php7.0-ldap php7.0-mbstring libapache2-mod-php7.0 curl \
+RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mariadb-server libqtgui4 mariadb-client apache2 php7.2 \
+    php7.2-cli php7.2-curl php7.2-gd php7.2-mysql php7.2-zip php7.2-xml php7.2-ldap php7.2-mbstring libapache2-mod-php7.2 curl \
 	wget firefox unzip git fluxbox libxss1 libappindicator1 libindicator7 openjdk-8-jre xvfb gconf-service fonts-liberation \
 	dbus xdg-utils libasound2 libqt4-dbus libqt4-network libqtcore4 libpython2.7 libqt4-xml libaudio2 fontconfig nodejs npm
 
